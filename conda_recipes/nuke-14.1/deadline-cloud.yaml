@@ -1,0 +1,11 @@
+condaPlatforms:
+  - platform: linux-64
+    defaultSubmit: true
+    sourceArchiveFilename: Nuke14.1v5-linux-x86_64.tgz
+    sourceDownloadInstructions: 'Run "curl -L https://www.foundry.com/products/download_product?file=Nuke14.1v5-linux-x86_64.tgz -O Nuke14.1v5-linux-x86_64.tgz"'
+    buildTool: rattler-build
+  # - platform: win-64
+  #   defaultSubmit: false
+  #   sourceArchiveFilename: blender-4.3.0-windows-x64.zip
+  #   sourceDownloadInstructions: 'Run "curl -LO https://download.blender.org/release/Blender4.3/blender-4.3.0-windows-x64.zip"'
+  #   buildTool: conda-build
