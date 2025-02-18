@@ -2,7 +2,7 @@
 # See https://prefix-dev.github.io/rattler-build/latest/
 
 context:
-  version: "14.1v5"
+  version: "14.1v6"
   major_minor_version: "14.1"
 
 package:
