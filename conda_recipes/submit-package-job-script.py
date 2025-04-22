@@ -5,6 +5,11 @@ Submits a Conda package build job to the configured AWS Deadline Cloud queue.
 Installation Requirements:
 * Python 3.9+
 * The `deadline` library installed into Python.
+        
+Test run args:    
+C:/Users/tvoll/Documents/dev/deadline-cloud-samples/conda_recipes/openjd-adaptor-runtime --queue "CBS VFX Queue" -p linux-64
+
+
 """
 import argparse
 import fnmatch

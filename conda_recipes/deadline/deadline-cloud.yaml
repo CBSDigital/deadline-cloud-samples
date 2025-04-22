@@ -1,28 +1,35 @@
 condaPlatforms:
   - platform: linux-64
-    variant: py311
+    variant: py39
     defaultSubmit: true
+    buildTool: rattler-build
+    variantConfig:
+      python:
+      - 3.9
+  - platform: linux-64
+    variant: py311
+    defaultSubmit: false
     buildTool: rattler-build
     variantConfig:
       python:
       - 3.11
   - platform: linux-64
     variant: py312
-    defaultSubmit: true
+    defaultSubmit: false
     buildTool: rattler-build
     variantConfig:
       python:
       - 3.12
   - platform: win-64
     variant: py311
-    defaultSubmit: true
+    defaultSubmit: false
     buildTool: conda-build
     variantConfig:
       python:
       - 3.11
   - platform: win-64
     variant: py312
-    defaultSubmit: true
+    defaultSubmit: false
     buildTool: conda-build
     variantConfig:
       python:

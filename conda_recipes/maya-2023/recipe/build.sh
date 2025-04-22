@@ -27,9 +27,18 @@ ln -r -s "$INSTALL_DIR/bin/maya$MAYA_VERSION" "$INSTALL_DIR/bin/maya"
 # from the system package manager, dnf.
 mkdir -p "$SRC_DIR/download"
 cd "$SRC_DIR/download"
+
+# dnf repolist --all
+# sudo dnf install epel-release
+# sudo dnf update
+dnf repolist --all
 dnf download --resolve -y freetype alsa-lib fontconfig harfbuzz libbrotli graphite2 \
-    libxkbfile xcb-util-cursor xcb-util-wm xcb-util-keysyms libxkbcommon-x11 \
-    libpng-devel libpng
+    libxkbfile xcb-util-cursor xcb-util-wm xcb-util-keysyms libxkbcommon-x11 
+    #gcc libpng15
+
+cat /etc/os-release
+uname -m
+wget https://dl.rockylinux.org/pub/rocky/9/devel/x86_64/os/Packages/l/libpng15-1.5.30-14.el9.x86_64.rpm
 
 for RPM_FILE in *.rpm; do
     rpm2cpio "$RPM_FILE" | cpio -idm
